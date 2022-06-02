@@ -18,12 +18,26 @@ import { ClassNames } from '@emotion/react';
 import App from '../App';
 import { createTheme } from '@mui/material/styles';
 import { fontFamily } from '@mui/system';
+import SearchIcon from '@mui/icons-material/Search';
+import InputBase from '@mui/material/InputBase';
+import ItemListContainer from './ItemListContainer';
+
+
+
+
+
+
+
+
+
 
 const pages = ['Productos', 'Nosotros', 'Ubicacion', 'Accesorios'];
+
 
 const MUNavbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -39,12 +53,13 @@ const MUNavbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-  
 
+  
+  
   return (
-    <AppBar position="fixed">
+    <AppBar  position="static" color="secondary" enableColorOnDark  >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters   >
           < Typography
             variant="h6"
             noWrap
@@ -56,14 +71,14 @@ const MUNavbar = () => {
               fontFamily: 'monospace',
               fontWeight: 10,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'secondary',
               textDecoration: 'none',
             }}
 
           >
             <Logotipo/>
           </Typography>
-
+    
           <Box sx={{ flexGrow: 2, display: { xs: 'flex', md: 'none' }}}>
             <IconButton
               size="large"
@@ -100,7 +115,6 @@ const MUNavbar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -117,6 +131,7 @@ const MUNavbar = () => {
               textDecoration: 'none',
             }}
           >
+     
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -128,20 +143,31 @@ const MUNavbar = () => {
                 {page}
               </Button>
             ))}
-          </Box>
+          </Box >
+          <Box sx={{ flexGrow: 12, display: { xs: 'flex', md: 'flex' }, letterSpacing: '.3rem', fontFamily: 'monospace'}}>
+         <div className='container-fluid row g-5  mx-auto '>
+            <form className='d-flex mx-auto'>
+             <input className='form-control ' type="search" placeholder="¿Que estas buscando?" aria-label="Search"/>
+              <button className='btn btn-outline-dark btn-sm ' type="submit">Search</button>
+          </form>
+      </div>
+      </Box >
 
-          <Box sx={{ flexGrow: 0, display: { xs: 'flex', md: 'flex' }, letterSpacing: '.3rem', fontFamily: 'monospace'}}>
-             
-              <Typography variant='h7' color={"white"}>
+
+          
+
+          <Box sx={{ flexGrow: 0, display: { xs: 'block', md: 'flex' }, letterSpacing: '.3rem', fontFamily: 'monospace'}}>
+              <Typography variant='h7' color={"white"} >
                    Hello guest
               </Typography>
               <div>
-                  <button variant="outlined" >
-                      <strong>Sign In</strong>  
+                  <button className='btn btn-outline-dark btn-sm'>
+                      Sign in 
                   </button>
               </div>
-              < CartWidget fontSize= "large"/>
+              < CartWidget />
           </Box> 
+              <ItemListContainer/>
         </Toolbar>
       </Container>
     </AppBar>
