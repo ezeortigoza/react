@@ -43,3 +43,25 @@
 .white{
  color: white;
 }
+
+.card:hover{
+  border: 3px solid blue !important ;
+  transition: all 0.2s linear;
+}
+.card-body{
+  padding: 2rem 0 !important;
+}
+.card-text{
+  padding: 0.3 rem 1rem;
+  font-size: 1rem;
+}
+.card-img-top:hover{
+  transform: scale(1.8);
+}
+.overflow{
+  overflow: hidden;
+}
+.card-img-top{
+  transition:all 0.2s ease-out ;
+}
+

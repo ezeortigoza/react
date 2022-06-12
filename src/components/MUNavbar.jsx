@@ -21,6 +21,7 @@ import { fontFamily } from '@mui/system';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import ItemListContainer from './ItemListContainer';
+import { NavLink } from 'react-bootstrap';
 
 
 
@@ -57,7 +58,7 @@ const MUNavbar = () => {
   
   
   return (
-    <AppBar  position="static" color="secondary" enableColorOnDark  >
+    <AppBar  position="static" color="secondary"   >
       <Container maxWidth="xl">
         <Toolbar disableGutters   >
           < Typography
@@ -109,6 +110,7 @@ const MUNavbar = () => {
               }}
             >
               {pages.map((page) => (
+               // return <NavLink/>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
@@ -148,7 +150,7 @@ const MUNavbar = () => {
          <div className='container-fluid row g-5  mx-auto '>
             <form className='d-flex mx-auto'>
              <input className='form-control ' type="search" placeholder="¿Que estas buscando?" aria-label="Search"/>
-              <button className='btn btn-outline-dark btn-sm ' type="submit">Search</button>
+             {  <button className='btn btn-outline-dark btn-sm ' type="submit">Search</button> }
           </form>
       </div>
       </Box >
@@ -161,13 +163,12 @@ const MUNavbar = () => {
                    Hello guest
               </Typography>
               <div>
-                  <button className='btn btn-outline-dark btn-sm'>
+                 {  <button className='btn btn-outline-dark btn-sm'>
                       Sign in 
-                  </button>
+                  </button> }
               </div>
               < CartWidget />
           </Box> 
-              <ItemListContainer/>
         </Toolbar>
       </Container>
     </AppBar>
