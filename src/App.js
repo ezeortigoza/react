@@ -1,9 +1,8 @@
 import './App.css';
-import ItemCount from './components/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
 import MUNavbar from './components/MUNavbar';
-import Item from './components/Item'
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 
@@ -16,10 +15,25 @@ function App() {
   } 
   return (
    <div >
-          <MUNavbar/> 
-          {/*  <ItemCount inicial= {1} max={10} onAdd={onAdd} /> */}
-          <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>
-          <ItemDetailContainer/>
+          
+          
+          <>  
+            <BrowserRouter>
+                <MUNavbar/> 
+                <Routes>
+                  <Route path= '/' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/productos' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/relojes' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/notebooks' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/celulares' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/accesorios' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/productos/:id' element= { <ItemDetailContainer/>} ></Route>
+
+                </Routes>
+                <ItemDetailContainer/>
+            </BrowserRouter>
+            
+          </>
        
    </div> 
   

@@ -32,7 +32,7 @@ import { NavLink } from 'react-bootstrap';
 
 
 
-const pages = ['Productos', 'Nosotros', 'Ubicacion', 'Accesorios'];
+const pages = ['Productos', 'Relojes', 'Notebooks', 'Celulares','Accesorios'];
 
 
 const MUNavbar = () => {
@@ -58,6 +58,7 @@ const MUNavbar = () => {
   
   
   return (
+      
     <AppBar  position="static" color="secondary"   >
       <Container maxWidth="xl">
         <Toolbar disableGutters   >

@@ -17,7 +17,7 @@ function ItemCount({inicial,max, onAdd}) {
 
   return (
     <div className='text-center'>
-        <h2 className='white'>{count}</h2>
+        <h2>{count}</h2>
         <button onClick={sumar}>+</button>
         <button onClick={restar}>-</button>
         <button onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
