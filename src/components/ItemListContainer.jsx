@@ -23,6 +23,8 @@ function ItemListContainer({saludar}) {
            {id: 10, marca:"Iphone xs max 256GB", valor: 620, URL: "https://m.media-amazon.com/images/I/71LVhKIeesL._AC_SL1500_.jpg"},
            {id: 11, marca:"Iphone 12 mini 64GB", valor: 850, URL: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-mini-red-select-2020?wid=470&hei=556&fmt=png-alpha&.v=1604343707000"},
            {id: 12, marca:"Iphone 12  256GB", valor: 620, URL: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-family-select-2021?wid=940&hei=1112&fmt=jpeg&qlt=90&.v=1617135051000"},
+           {id: 13, marca:"Apple Watch Serie 3 GPS", valor: 300, URL: "https://d2ihpvt6nd5q28.cloudfront.net/wp-content/uploads/2020/11/WatchS3.GS_.44.png"},
+           {id: 14, marca:"Macbook air ", valor: 1000, URL: "https://http2.mlstatic.com/D_NQ_NP_801112-MLA46516512347_062021-O.webp"},
 
          ])
         },);

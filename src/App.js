@@ -27,10 +27,10 @@ function App() {
                   <Route path= '/notebooks' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/celulares' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/accesorios' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/productos/:id' element= { <ItemDetailContainer/>} ></Route>
+                  <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
 
                 </Routes>
-                <ItemDetailContainer/>
+                   
             </BrowserRouter>
             
           </>

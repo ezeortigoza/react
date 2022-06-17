@@ -22,20 +22,15 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import ItemListContainer from './ItemListContainer';
 import { NavLink } from 'react-bootstrap';
+import { Link} from "react-router-dom";
 
 
-
-
-
-
-
-
-
-
-const pages = ['Productos', 'Relojes', 'Notebooks', 'Celulares','Accesorios'];
 
 
 const MUNavbar = () => {
+
+  const pages = ['Productos','Celulares','Notebooks','Relojes'] 
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -55,10 +50,15 @@ const MUNavbar = () => {
     setAnchorElUser(null);
   };
 
-  
+ 
   
   return (
+    <> 
+    <div>
+       <Link to='/Productos'>Productos</Link>
       
+
+    </div>
     <AppBar  position="static" color="secondary"   >
       <Container maxWidth="xl">
         <Toolbar disableGutters   >
@@ -76,6 +76,9 @@ const MUNavbar = () => {
               color: 'secondary',
               textDecoration: 'none',
             }}
+
+            
+            
 
           >
             <Logotipo/>
@@ -111,9 +114,8 @@ const MUNavbar = () => {
               }}
             >
               {pages.map((page) => (
-               // return <NavLink/>
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center"> <navLink to={`/${page}`}>{page}</navLink> </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -138,13 +140,13 @@ const MUNavbar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
-              </Button>
+              </Button> 
             ))}
           </Box >
           <Box sx={{ flexGrow: 12, display: { xs: 'flex', md: 'flex' }, letterSpacing: '.3rem', fontFamily: 'monospace'}}>
@@ -173,6 +175,7 @@ const MUNavbar = () => {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 };
 
