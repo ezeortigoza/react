@@ -16,12 +16,12 @@ function ItemCount({inicial,max, onAdd}) {
     }
 
   return (
-    <div className='text-center'>
+    <div className='text-center my-5'>
         <h2>{count}</h2>
-        <button onClick={sumar}>+</button>
-        <button onClick={restar}>-</button>
-        <button onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
-        <button onClick={reset}>Reset</button>
+        <button className='btn btn-outline-dark' onClick={sumar}>+</button>
+        <button className='btn btn-outline-dark' onClick={restar}>-</button>
+        <button className='btn btn-outline-dark' onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
+        <button className='btn btn-outline-dark' onClick={reset}>Reset</button>
     </div>
   )   
 }

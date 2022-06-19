@@ -8,6 +8,7 @@ function ItemDetailContainer() {
      
     const [objeto,setObjeto] = useState ({});
     const {id} = useParams();
+    const {obj} = useParams();
 
     
     useEffect(() => {
@@ -18,7 +19,7 @@ function ItemDetailContainer() {
           return  detalle.id === idNumber
           })
           res(itemFound);
-          
+
         },);
       },2000)
       

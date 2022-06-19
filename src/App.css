@@ -45,7 +45,7 @@
 }
 
 .card:hover{
-  border: 3px solid blue !important ;
+  border: 1px solid blue !important ;
   transition: all 0.2s linear;
 }
 .card-body{
@@ -64,4 +64,29 @@
 .card-img-top{
   transition:all 0.2s ease-out ;
 }
+.button{
+  color: blue;
+  font-size: 22px;
+  font-weight: bold;
+  
+}
+a{
+  margin-right: 1rem;
+  
+}
+.espacio{
+  margin-right: 1rem;
+}
+.tarjetas-text{
+  padding: 0.3 rem 1rem;
+  font-size: 1rem;
+}
+.tarjetas:hover{
+
+  transition: all 0.2s linear;
+}
+.tarjetas-body{
+  padding: 2rem 0 !important;
+}
+
 
