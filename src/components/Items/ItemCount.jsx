@@ -1,8 +1,9 @@
+import { Button } from '@mui/material'
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 
 
-function ItemCount({inicial,max, onAdd}) {
+function ItemCount({inicial,max, onAdd,handleOnAdd}) {
     const [count,setCount] = useState(inicial)
 
     const sumar = () =>{
@@ -33,7 +34,9 @@ function ItemCount({inicial,max, onAdd}) {
         <button className='btn btn-outline-dark' onClick={restar}>-</button>
         <button className='btn btn-outline-dark' onClick={() => {onAdd(count); reset()}}>Agregar al carrito</button>
         <button className='btn btn-outline-dark' onClick={reset}>Reset</button>
-    </div>
+        <br></br>
+        <button className='btn btn-outline-dark my-2' onClick={handleOnAdd}>Terminar compra</button>
+    </div>  
   )   
 }
 
