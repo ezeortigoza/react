@@ -11,6 +11,7 @@ function ItemListContainer({saludar}) {
      const {cel} = useParams();
      const {reloj} = useParams();
      const {carga} = useParams();
+     const {ipad} = useParams();
 
 
      useEffect(() => {
@@ -40,14 +41,22 @@ function ItemListContainer({saludar}) {
             })
             res(reloj);
           }
-          /* if (carga === undefined){
+          if(ipad === undefined){
+            res(productos);
+          }else{
+            const ipd = productos.filter(ipd =>{
+              return ipd.categoria === ipd;
+            })
+            res(ipd);
+          }
+          if (carga === undefined){
             res(productos)
           }else{
             const charge = productos.filter (cargador =>{
               return cargador.categoria === carga;
             })
             res(charge);
-          } */
+          } 
 
         }
         ,); 

@@ -45,7 +45,7 @@
 }
 
 .card:hover{
-  border: 1px solid blue !important ;
+  border: 2px solid black !important ;
   transition: all 0.2s linear;
 }
 .card-body{

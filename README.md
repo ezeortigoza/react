@@ -1,3 +1,6 @@
+Buenas mi proyecto se basa en un e-commerce, la venta de productos es todo de apple en si la pagina es de apple ya que tiene su icono, en esta pagina encontraras (iphone,ipads,Macbook,accesorios y watch). Esta echa con React, js , boostrap y css. Tiene librerias como sweetAlert y materialIcon.
+Basicamente elegi hacer un e-commerce de apple no porque me encante la marca sino que me dedico a vender celulares en general iphone y es algo que me identifica bastante, mas adelante lo puedo hacer como un proyecto real a la pagina que me encantaria... Eso fue todo gracias por leer mi breve descripcion de mi pequeño e-commerce :). 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

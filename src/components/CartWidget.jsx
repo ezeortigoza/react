@@ -1,13 +1,13 @@
 import React from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-function CartWidget() {
+function CartWidget({onAdd,count}) {
   return (
     <>
-        <ShoppingCartIcon/>
+        <ShoppingCartIcon  />
     
-    </>
-  )
+    </>   
+  )   
 }
 
 export default CartWidget

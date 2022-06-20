@@ -9,16 +9,16 @@ function Item({celulares}) {
   const urlDetalle = `/detalle/${celulares.id} `
     
   return (  
-<div className="card" style={{width: '20rem'}} key={Item.id} >
+<div className="card w-75 h-100 mx-auto" style={{width: '20rem'}} key={Item.id} >
   <div className='overflow'>
-  <img  src= {celulares.URL} className="card-img-top" alt="Iphone"/>
+  <img   src= {celulares.URL} className="card-img-top " alt="Iphone"/>
   </div>
   <div className="card-body mx-auto">
     <h5 className="card-title text-center">{celulares.marca}</h5>
-    <p className="card-text text-center">$ {celulares.valor} USD</p>
-    <div className='mx-auto'>
-    <Link to={urlDetalle} >
-         <button className="btn btn-outline-dark mx-auto">Ver mas detalles</button>
+    <p className="card-text text-center">${celulares.valor} USD</p>
+    <div className='text-center'>
+    <Link className='mx-auto text-center' to={urlDetalle} >
+         <button className="btn btn-outline-dark mx-auto text-center">Ver mas detalles</button>
     </Link>
     </div>
   </div>

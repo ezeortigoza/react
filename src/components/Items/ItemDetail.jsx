@@ -2,11 +2,17 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import ItemCount from './ItemCount';
+import Swal from 'sweetalert2'
+
 
 
 function ItemDetail({objeto}) {
    const onAdd = (count) =>{
-    alert(`Sumaste ${count} productos`);    
+    Swal.fire({
+      icon: 'success',
+      title: 'Woww!',
+      text: `Sumaste ${count} productos` ,
+    })  
   } 
   return (
     <div>

@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
+
 
 function ItemCount({inicial,max, onAdd}) {
     const [count,setCount] = useState(inicial)
 
     const sumar = () =>{
-    count < max ? setCount(count + 1) : alert("No puedes agregar mas productos");}
+    count < max ? setCount(count + 1) :Swal.fire({
+      icon: 'warning',
+      title: 'Oops...',
+      text: 'No puedes agregar mas productos!',
+    })}
 
 
     const restar = () =>{
-     count > inicial ? setCount(count - 1) : alert("No puedes quitar mas productos"); }
+     count > inicial ? setCount(count - 1) : Swal.fire({
+      icon: 'warning',
+      title: 'Oops...',
+      text: 'No puedes quitar mas productos!',
+    
+    })}
 
 
     const reset = () =>{

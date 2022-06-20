@@ -15,16 +15,19 @@ import CartWidget from './CartWidget'
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-        <Link className='nav-link' to='/categoria/cel'>Celulares</Link>
+        <Link className='nav-link' to='/categoria/cel'>Iphone</Link>
         </li>
         <li className="nav-item">
-            <Link className='nav-link'to='/categoria/reloj'>Relojes</Link>
+            <Link className='nav-link'to='/categoria/reloj'>Watch</Link>
         </li>
         <li className='nav-item'>
         <Link className='nav-link' to='/categoria/note'>MacBook</Link>
         </li>
         <li className='nav-item'>
         <Link className='nav-link'  to='/categoria/carga'>Accesorios</Link>
+        </li>
+        <li className='nav-item'>
+        <Link className='nav-link' to='/categoria/ipad'>Ipad</Link>
         </li>
       </ul>
     <form className="d-flex mx-auto">

@@ -11,9 +11,6 @@ import Footer from './components/Footer';
 
 function App() {
 
-  const onAdd = (count) =>{
-    alert(`Sumaste ${count} productos`);    
-  } 
   return (
    <div >
           
@@ -29,6 +26,7 @@ function App() {
                   <Route path= '/categoria/:cel' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/categoria/:reloj' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/categoria/:carga' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/categoria/:ipad' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
                 </Routes>
                 <Footer/>
