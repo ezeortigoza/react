@@ -1,18 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import ItemCount from './ItemCount';
 import Swal from 'sweetalert2'
-import { Link } from 'react-router-dom'
+import { Link,  useNavigate } from 'react-router-dom'
+import {CartContext} from '../context/CartContext';
+
+
 
 
 
 function ItemDetail({objeto}) {
+  const {addToCart} = useContext(CartContext);
+  //let navigate = useNavigate();
   const [isAddedToCart,setAddedToCart] = useState(false);
+
 
    function handleOnAdd(){
     console.log('On add handler');
     setAddedToCart(true);
+    addToCart();
+    //navigate('/cart')
   } 
 
    const onAdd = (count) =>{
@@ -21,7 +29,9 @@ function ItemDetail({objeto}) {
       title: 'Woww!',
       text: `Sumaste ${count} productos` ,
     })  
-  } 
+    setAddedToCart(true);
+    addToCart(objeto,count)
+  }
   return (
     <div>
         <div className="card mb-3 " style={{maxWidth: '200px;'}} >

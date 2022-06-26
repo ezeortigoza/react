@@ -4,25 +4,32 @@ import MUNavbar from './components/MUNavbar';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from './components/Footer';
+import {  createContext, useState } from 'react';
+import Cart from './components/Cart';
+import {  CartProvider } from './components/context/CartContext';
 
 
 
+
+ export const miContexto = createContext({}); 
 
 
 function App() {
-
+/*  const [darkMode,setDarkMode] = useState(true);  */
   return (
    <div >
           
           
           <>  
+           {/* <miContexto.Provider value={{darkMode,setDarkMode}}>  */}
+           <CartProvider>
             <BrowserRouter>
                 <MUNavbar/> 
                 <Routes>
                   <Route path= '/home' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/productos' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/relojes' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/cart' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/cart' element= { <Cart/>}></Route>
                   <Route path= '/categoria/:id' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/categoria/:cel' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/categoria/:reloj' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
@@ -31,9 +38,11 @@ function App() {
                   <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
                 </Routes>
                 <Footer/>
-                   
             </BrowserRouter>
-            
+            <h2>Children</h2>
+            <p>Children 2</p>
+            </CartProvider>
+           {/* </miContexto.Provider>  */}
           </>
        
    </div> 
