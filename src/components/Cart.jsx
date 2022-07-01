@@ -1,9 +1,56 @@
-import React from 'react'
+import { TabsListUnstyled } from '@mui/base';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { CartContext } from './context/CartContext'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
+
+
 
 function Cart() {
+
+  const {cart,deleteItem,getItemPrice,clearCart,getItemCount} = useContext(CartContext);
+
+  if(cart.length === 0){
+   return <div className='mx-auto text-center my-5'>
+     < ShoppingCartIcon style={{height: '20rem',width: "10rem"}}/>
+    <h1 className='text-center'>Todavia no agregaste ningun producto al carrito</h1>
+    <Link className='btn btn-outline-dark mx-auto text-center mx-auto my-4' to='/home'>Volver al inicio</Link>
+    </div>
+  }
+
+
   return (
-    <div>Cart</div>
+    
+  <div className='grid row container-fluid justify-content-center my-5 espacio mx-auto '>
+      {
+        cart.map(item =>(
+  <div className=" card espacio my-5" style={{width: '15rem',height:'28rem'}} key={item.id} >
+  <div className='g-col-6 '>
+      <img   src= {item.URL}  className="card-img-top " alt="Iphone"/>
+  </div>
+  <div className="g-col-6 ">
+      <h6 className='text-center'>Cantidad: {item.count} </h6>
+      <h5 className="card-title text-center"> {item.marca}</h5>
+      <p  className="card-text text-center">${item.valor} USD</p> 
+  <div className='g-col-6 mx-auto text-center'>
+         <button onClick={() =>{deleteItem(item.id)}} className="btn btn-outline-danger mx-auto text-center">Eliminar</button>   
+  </div>
+  </div>
+</div>
+      
+      ))
+      }
+    <div className='text-center mx-auto my-5 espacio'>
+         <button className="btn btn-outline-dark mx-auto text-center espacio">Finalizar compra</button>
+         <button onClick={clearCart} className="btn btn-outline-danger mx-auto text-center espacio"> Eliminar todos los productos </button>
+         <h5 className='my-4'>El monto total de productos agregados es de: ${getItemPrice()}USD</h5>
+  
+    </div>
+         
+    </div>
+   
+    
   )
 }
-
 export default Cart

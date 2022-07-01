@@ -2,6 +2,7 @@ import React, { useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './Items/ItemDetail';
 import {productos} from '../data/products'
+import PacmanLoader from 'react-spinners/PacmanLoader'
 
 
 function ItemDetailContainer() {
@@ -9,6 +10,7 @@ function ItemDetailContainer() {
     const [objeto,setObjeto] = useState ({});
     const {id} = useParams();
     const {obj} = useParams();
+    const [isLoading,setIsloading] = useState(true);
 
     
     useEffect(() => {
@@ -30,10 +32,14 @@ function ItemDetailContainer() {
       .catch((error)=>{
         console.error("Error",error);
       })
-     
+      .finally(()=>{
+        setIsloading(false);
+      })
     }, [id])
     
-    
+    if(isLoading){
+      return <PacmanLoader/>
+    }
     
     return (
        <div>

@@ -15,13 +15,12 @@ import {  CartProvider } from './components/context/CartContext';
 
 
 function App() {
-/*  const [darkMode,setDarkMode] = useState(true);  */
+
   return (
    <div >
           
           
           <>  
-           {/* <miContexto.Provider value={{darkMode,setDarkMode}}>  */}
            <CartProvider>
             <BrowserRouter>
                 <MUNavbar/> 
@@ -37,12 +36,16 @@ function App() {
                   <Route path= '/categoria/:ipad' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
                 </Routes>
+                <br>
+                </br>
+                <br>
+                </br>
+                <br>
+                </br>
+      
                 <Footer/>
             </BrowserRouter>
-            <h2>Children</h2>
-            <p>Children 2</p>
             </CartProvider>
-           {/* </miContexto.Provider>  */}
           </>
        
    </div> 
