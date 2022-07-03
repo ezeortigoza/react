@@ -1,13 +1,12 @@
+import { createContext } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import Cart from './components/Cart';
+import { CartProvider } from './components/context/CartContext';
+import Footer from './components/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import MUNavbar from './components/MUNavbar';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from './components/Footer';
-import {  createContext, useState } from 'react';
-import Cart from './components/Cart';
-import {  CartProvider } from './components/context/CartContext';
-
 
 
 

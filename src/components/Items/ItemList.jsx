@@ -2,6 +2,7 @@ import React from 'react'
 import Item from './Item'
 
 function ItemLIst({celulares}){
+  console.log(celulares);
   return (
     <div className='container d-flex justify-content-center my-5   '>
       <div className='row '>

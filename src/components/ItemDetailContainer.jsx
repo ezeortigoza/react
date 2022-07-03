@@ -1,7 +1,7 @@
 import React, { useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
+import { traerUnProducto } from '../services/firestore';
 import ItemDetail from './Items/ItemDetail';
-import {productos} from '../data/products'
 import PacmanLoader from 'react-spinners/PacmanLoader'
 
 
@@ -11,35 +11,25 @@ function ItemDetailContainer() {
     const {id} = useParams();
     const {obj} = useParams();
     const [isLoading,setIsloading] = useState(true);
+   
 
     
     useEffect(() => {
-      const cel = new Promise((res,rej)=>{
-        setTimeout(()=>{
-          let idNumber = parseInt(id)
-          const itemFound = productos.find(detalle =>{
-          return  detalle.id === idNumber
-          })
-          res(itemFound);
-
-        },);
-      },2000)
-      
-      cel
-      .then((result)=>{
-        setObjeto(result);
-      })
-      .catch((error)=>{
-        console.error("Error",error);
-      })
-      .finally(()=>{
-        setIsloading(false);
-      })
+      setTimeout(() => {
+        traerUnProducto(id)
+        .then((res)=>{
+          setObjeto(res);
+          setIsloading(false);
+        })
+        .catch((error)=>{
+          console.log(error)
+        })
+      }, 2000);
     }, [id])
     
-    if(isLoading){
-      return <PacmanLoader/>
-    }
+     if(isLoading){
+      return <PacmanLoader className='text-center mx-auto my-5' />
+    } 
     
     return (
        <div>

@@ -52,7 +52,7 @@ export const CartProvider = ({children}) =>{
 
     //Obtener precio total de los productos
     const getItemPrice = () =>{
-        return cart.reduce((total,item) => total += item.valor * item.count,0)
+        return cart.reduce((total,item) => total += item.precio * item.count,0)
     }
 
     return(
