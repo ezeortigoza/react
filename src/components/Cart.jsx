@@ -45,7 +45,7 @@ function Cart() {
       }
     <div className='text-center mx-auto my-5 espacio'>
       <Link to='/checkout'>
-         <button className="btn btn-outline-dark mx-auto text-center espacio">Finalizar compra</button>
+         <button className="btn btn-outline-dark mx-auto text-center espacio">Ir al checkout</button>
       </Link>
          <button onClick={clearCart} className="btn btn-outline-danger mx-auto text-center espacio"> Eliminar todos los productos </button>
          <h5 className='my-4'>El monto total de productos agregados es de: ${getItemPrice()}USD</h5>

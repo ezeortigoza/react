@@ -11,7 +11,7 @@ function Checkout() {
     const [name,setName] = useState("");
     const [email,setEmail] = useState("");
     const [cel,setCel] = useState ("");
-    const {cart,getItemPrice} = useContext(CartContext);
+    const {cart,getItemPrice,clearCart} = useContext(CartContext);
     const [idCompra,setIdCompra] = useState("");
   
 
@@ -65,7 +65,7 @@ function Checkout() {
         <input onChange={(e)=> setName(e.target.value)} className="controls" type="text" name="nombres" id="nombres" placeholder='Ingrese su nombre'></input>
         <input onChange={(e)=> setCel(e.target.value)} className="controls" type="text" name="celular" id="celular" error={validMobileNumber} placeholder='Ingrese su cel'></input>
         <input onChange={(e)=> setEmail(e.target.value)} className="controls" type="email" name="correo" id="correo" error={validateEmail}  placeholder='Ingrese su email'></input>
-          <button onClick={HandleClick} className="btn btn-outline-light botons" type="submit" value="Registrar">TERMINAR COMPRA</button>
+          <button onClick={() => {HandleClick(); clearCart();}} className="btn btn-outline-light botons" type="submit" value="Registrar">TERMINAR COMPRA</button>
     </div>
     )
   }
