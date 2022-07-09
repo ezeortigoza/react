@@ -2,11 +2,13 @@ import { createContext } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Cart from './components/Cart';
+import Checkout from './components/Checkout';
 import { CartProvider } from './components/context/CartContext';
 import Footer from './components/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import MUNavbar from './components/MUNavbar';
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
           
           
           <>  
+      
            <CartProvider>
             <BrowserRouter>
                 <MUNavbar/> 
@@ -34,6 +37,7 @@ function App() {
                   <Route path= '/categoria/:carga' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/categoria/:ipad' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
                   <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
+                  <Route path= '/checkout' element= {<Checkout/>} ></Route>
                 </Routes>
                 <br>
                 </br>
@@ -41,7 +45,6 @@ function App() {
                 </br>
                 <br>
                 </br>
-      
                 <Footer/>
             </BrowserRouter>
             </CartProvider>

@@ -7,10 +7,12 @@ function Footer() {
      <footer className="py-3 my-4">
     <ul className="nav justify-content-center border-bottom pb-3 mb-3">
       <li className="nav-link"><Link to="/home" className="nav-link px-2 text-muted">Home</Link></li>
-      <li className="nav-link"><Link to="/categoria/cel" className="nav-link px-2 text-muted">Celulares</Link></li>
-      <li className="nav-link"><Link to="/categoria/reloj" className="nav-link px-2 text-muted">Relojes</Link></li>
-      <li className="nav-link"><Link to="/categoria/note" className="nav-link px-2 text-muted">Notebooks</Link></li>
+      <li className="nav-link"><Link to="/categoria/cel" className="nav-link px-2 text-muted">Iphone</Link></li>
+      <li className="nav-link"><Link to="/categoria/reloj" className="nav-link px-2 text-muted">Watch</Link></li>
+      <li className="nav-link"><Link to="/categoria/note" className="nav-link px-2 text-muted">MacBook</Link></li>
       <li className="nav-link"><Link to="/categoria/carga" className="nav-link px-2 text-muted">Accesorios</Link></li>
+      <li className="nav-link"><Link to="/categoria/ipad" className="nav-link px-2 text-muted">Ipad</Link></li>
+
     </ul>
     <p className="text-center text-muted">© 2022 Ezequiel Ortigoza</p>
   </footer>
