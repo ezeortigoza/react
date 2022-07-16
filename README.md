@@ -10,7 +10,7 @@ Tanto el listado de categorías, como los productos y las órdenes generadas se 
 
 Puede visitarse el deploy del proyecto en [](https://coder-vivas.vercel.app/)
 
-![GIF de muestra.](/public/Gif "Vista del proyecto.")
+![GIF de muestra.](/miapp/public/Gif "Vista del proyecto.")
 
 ## Tecnologías utilizadas
 
