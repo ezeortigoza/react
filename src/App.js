@@ -27,15 +27,15 @@ function App() {
             <BrowserRouter>
                 <MUNavbar/> 
                 <Routes>
-                  <Route path= '/home' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/productos' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/relojes' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/home' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/productos' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/relojes' element= { <ItemListContainer/>}></Route>
                   <Route path= '/cart' element= { <Cart/>}></Route>
-                  <Route path= '/categoria/:id' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/categoria/:cel' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/categoria/:reloj' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/categoria/:carga' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
-                  <Route path= '/categoria/:ipad' element= { <ItemListContainer saludar={"Hola Fran bienvenido al e-commerce :)"}/>}></Route>
+                  <Route path= '/categoria/:id' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/categoria/:cel' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/categoria/:reloj' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/categoria/:carga' element= { <ItemListContainer/>}></Route>
+                  <Route path= '/categoria/:ipad' element= { <ItemListContainer/>}></Route>
                   <Route path= '/detalle/:id' element= { <ItemDetailContainer/>} ></Route>
                   <Route path= '/checkout' element= {<Checkout/>} ></Route>
                 </Routes>

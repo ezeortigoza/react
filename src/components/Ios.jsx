@@ -1,6 +1,4 @@
 import React from 'react'
-//import Logotipo from '../assets/Logo.jpg'
-
 
 function Logotipo() {
   return (

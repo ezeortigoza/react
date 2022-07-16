@@ -1,73 +1,100 @@
-Buenas mi proyecto se basa en un e-commerce, la venta de productos es todo de apple en si la pagina es de apple ya que tiene su icono, en esta pagina encontraras (iphone,ipads,Macbook,accesorios y watch). Esta echa con React, js , boostrap y css. Tiene librerias como sweetAlert y materialIcon.
-Basicamente elegi hacer un e-commerce de apple no porque me encante la marca sino que me dedico a vender celulares en general iphone y es algo que me identifica bastante, mas adelante lo puedo hacer como un proyecto real a la pagina que me encantaria... Eso fue todo gracias por leer mi breve descripcion de mi pequeño e-commerce :). 
+# APPLESTORE
 
-# Getting Started with Create React App
+## Descripción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio contiene el proyecto desarrollado durante el curso de `React JS` de `Coderhouse`.
 
-## Available Scripts
+La aplicación consiste en un ecommerce en el cual se puede filtrar los productos de acuerdo a categorías, y acceder a ver el detalle de cada producto. Los mismos pueden ser agregados al carrito para luego completar un formulario simulando un proceso de compra completo.
 
-In the project directory, you can run:
+Tanto el listado de categorías, como los productos y las órdenes generadas se almacenan en `Firebase`.
 
-### `npm start`
+Puede visitarse el deploy del proyecto en [](https://coder-vivas.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![GIF de muestra.](/public/Gif "Vista del proyecto.")
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologías utilizadas
 
-### `npm test`
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase) ![Bootstrap](https://getbootstrap.com/https://img.shields.io/badge/-Bootstrap-blue) ![Netlify] (https://www.netlify.com/https://img.shields.io/badge/-Netlify-red)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [React JS](https://reactjs.org/)
+* [React Router Dom](https://reactrouter.com/)
+* [Material UI](https://mui.com/)
+* [Firebase](https://firebase.google.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Netlify](https://www.netlify.com/) (para deploy)
 
-### `npm run build`
+## Ejecutar el proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para ejecutar el proyecto, el mismo puede descargarse como .zip o clonarlo con:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+git clone https://github.com/ezeortigoza
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instalar las dependencias:
 
-### `npm run eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Luego es necesario crear un proyecto en Firebase y crear dos colecciones en Firestore (una con el nombre `products` donde se ingresarán los productos, y otra con el nombre `order` para almacenar las ordenes de compra que se generaron, los productos creados  se mostrarán en la NavBar). Los items de ambas colecciones deben crearse manualmente desde Firebase.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##### Ejemplo de product:
+```
+product = {
+  category: "ipad"
+  description: "descripción"
+  pictureUrl: "url de la imagen"
+  price: 450
+  stock: 100
+  title: "Nombre del producto"
+}
+```
+##### Ejemplo de order:
+```
+Buyer
+cel: "numero"
+email:"email"
+name:"nombre"
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+description:"caracteristica"
+category:"categoria"
+count: 5
+id:"9G45V5XCFafhS9nxsfXC"
+pictureURL:"imagen"
+price: 500
+stock:40
+title:"titulo"
+total: 40
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+La colección `orders` se creará automáticamente al generar la primer orden de compra.
 
-## Learn More
+Una vez disponible la aplicación en Firebase, habiendo cargado productos y categorías, renombrar el archivo `.env.example` ubicado en la raíz del proyecto a `.env` y completar las variables de configuración provistas por Firebase:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTH_DOMAIN=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGE_BUCKET=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+REACT_APP_FIREBASE_APP_ID=
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Luego iniciar el servidor con:
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+El proyecto estará corriendo en `http://localhost:3000`
 
-### Analyzing the Bundle Size
+## Consideraciones adicionales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Bootstrap
+Se escogió bootstrap como librería de componentes para agilizar el proceso de desarrollo y estilado de la aplicación, aprovechando la posibilidad de extender los componentes mediante el uso de themes.
+### Firebase
+En Firebase se almacenaron, además del listado de productos y las órdenes generadas, las categorías correspondientes a los productos.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Barra buscadora
+Le agregue una barra buscadora para que el usuario pueda buscar sus productos y asi facilitar su compra! 

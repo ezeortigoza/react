@@ -9,7 +9,6 @@ function ItemDetailContainer() {
      
     const [objeto,setObjeto] = useState ({});
     const {id} = useParams();
-    const {obj} = useParams();
     const [isLoading,setIsloading] = useState(true);
    
 

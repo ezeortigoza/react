@@ -4,8 +4,7 @@ import ItemList from './Items/ItemList';
 import { traerProducto, traerProductosDeCategoria } from '../services/firestore';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 
-function ItemListContainer({saludar}) {
-  /*  const {id} = useParams(); */
+function ItemListContainer() {
    const [celulares,setCelulares] = useState(null);
    const [loading,setLoading] = useState(true);
    const {id} = useParams();
