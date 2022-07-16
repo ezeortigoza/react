@@ -10,7 +10,7 @@ Tanto el listado de categorías, como los productos y las órdenes generadas se 
 
 Puede visitarse el deploy del proyecto en [](https://coder-vivas.vercel.app/)
 
-![GIF de muestra.](/miapp/public/Gif "Vista del proyecto.")
+![GIF de muestra.](/miapp/public/Gif.gif "Vista del proyecto.")
 
 ## Tecnologías utilizadas
 
@@ -70,18 +70,8 @@ total: 40
 ```
 La colección `orders` se creará automáticamente al generar la primer orden de compra.
 
-Una vez disponible la aplicación en Firebase, habiendo cargado productos y categorías, renombrar el archivo `.env.example` ubicado en la raíz del proyecto a `.env` y completar las variables de configuración provistas por Firebase:
 
-```
-REACT_APP_FIREBASE_API_KEY=
-REACT_APP_FIREBASE_AUTH_DOMAIN=
-REACT_APP_FIREBASE_PROJECT_ID=
-REACT_APP_FIREBASE_STORAGE_BUCKET=
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
-REACT_APP_FIREBASE_APP_ID=
-```
-
-Luego iniciar el servidor con:
+ Iniciar el servidor con:
 
 ```
 npm start
