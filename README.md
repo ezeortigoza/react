@@ -8,7 +8,8 @@ La aplicación consiste en un ecommerce en el cual se puede filtrar los producto
 
 Tanto el listado de categorías, como los productos y las órdenes generadas se almacenan en `Firebase`.
 
-Puede visitarse el deploy del proyecto en [](https://coder-vivas.vercel.app/)
+Puede visitarse el deploy del proyecto en [](https://appleeonline.netlify.app)
+## https://appleeonline.netlify.app
 
 ![GIF de muestra.](/miapp/public/Gif.gif "Vista del proyecto.")
 
