@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createContext } from "react";
+import Swal from 'sweetalert2';
 
 
 export const CartContext = createContext()
@@ -9,7 +10,12 @@ export const CartProvider = ({children}) =>{
 
     const addToCart = (objeto, count) =>{
       if(isInCart(objeto.id)){
-        console.log("Ya esta en el carrito");
+        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: 'Ya esta agregado en el carrito!',
+          
+          })
       } else{
 
           setCart([ ...cart,{...objeto , count}]);
