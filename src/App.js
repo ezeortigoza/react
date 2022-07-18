@@ -27,6 +27,7 @@ function App() {
             <BrowserRouter>
                 <MUNavbar/> 
                 <Routes>
+                  <Route path= '/' element= { <ItemListContainer/>}></Route>
                   <Route path= '/home' element= { <ItemListContainer/>}></Route>
                   <Route path= '/productos' element= { <ItemListContainer/>}></Route>
                   <Route path= '/relojes' element= { <ItemListContainer/>}></Route>
