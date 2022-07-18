@@ -88,7 +88,7 @@ En Firebase se almacenaron, además del listado de productos y las órdenes gene
 
 
 
-# Mejoras del proyecto
+## Mejoras del proyecto
 
 ### Barra buscadora
 Agregar una barra buscadora para que el usuario se le haga mas facil encontrar su producto.
