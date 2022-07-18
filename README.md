@@ -87,7 +87,9 @@ Se escogió bootstrap como librería de componentes para agilizar el proceso de 
 En Firebase se almacenaron, además del listado de productos y las órdenes generadas, las categorías correspondientes a los productos.
 
 
-MEJORAS DEL PROYECTO
+
+# MEJORAS DEL PROYECTO
+
 ### Barra buscadora
 Agregar una barra buscadora para que el usuario se le haga mas facil encontrar su producto.
 
