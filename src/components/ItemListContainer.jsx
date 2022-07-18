@@ -1,13 +1,14 @@
-import React, { useState ,useEffect } from 'react'
+import {useState, useEffect, createContext} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from './Items/ItemList';
 import { traerProducto, traerProductosDeCategoria } from '../services/firestore';
 import PacmanLoader from 'react-spinners/PacmanLoader';
 
+
 function ItemListContainer() {
-   const [celulares,setCelulares] = useState(null);
-   const [loading,setLoading] = useState(true);
-   const {id} = useParams();
+  const [celulares,setCelulares] = useState(null);
+  const [loading,setLoading] = useState(true);
+  const {id} = useParams();
 
 
    useEffect(() => {
@@ -44,7 +45,6 @@ function ItemListContainer() {
 
   return (
     <div>
-   
       <ItemList celulares={celulares}/>
     </div>
   )

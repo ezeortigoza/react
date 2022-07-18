@@ -3,7 +3,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { CartContext } from './context/CartContext';
 import { Link} from 'react-router-dom'
 
-function CartWidget({onAdd,count}) {
+function CartWidget() {
 
   const {getItemCount} = useContext(CartContext);
 

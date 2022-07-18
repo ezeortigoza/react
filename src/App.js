@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext} from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
 import Cart from './components/Cart';
@@ -17,12 +17,12 @@ import MUNavbar from './components/MUNavbar';
 
 function App() {
 
+
   return (
    <div >
           
           
           <>  
-      
            <CartProvider>
             <BrowserRouter>
                 <MUNavbar/> 

@@ -7,7 +7,7 @@ function Item({celulares}) {
   const urlDetalle = `/detalle/${celulares.id} `
     
   return (  
-<div className="card w-75 h-100 mx-auto" style={{width: '20rem'}} key={Item.id} >
+<div className="card w-75 h-100 mx-auto" style={{width: '20rem'}} key={celulares.id} >
   <div className='overflow'>
   <img   src= {celulares.pictureURL} className="card-img-top " alt="Iphone"/>
   </div>

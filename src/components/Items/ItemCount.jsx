@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Swal from 'sweetalert2'
 
-function ItemCount({inicial,max, onAdd,handleOnAdd}) {
+function ItemCount({inicial,max, onAdd}) {
     const [count,setCount] = useState(inicial)
 
     const sumar = () =>{
